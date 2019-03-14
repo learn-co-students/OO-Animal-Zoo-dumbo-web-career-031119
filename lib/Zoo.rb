@@ -24,7 +24,9 @@ class Zoo
   end
 
   def animals
-    Animal.all
+    Animal.all.select do |animal|
+      self == animal.zoo
+    end
   end
 
   def animal_species
