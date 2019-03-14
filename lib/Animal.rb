@@ -2,7 +2,7 @@ require 'pry'
 
 class Animal
   attr_reader :species, :nickname
-  attr_accessor :weight, :current_zoo
+  attr_accessor :weight, :zoo #:current_zoo
 
   ANIMALS = []
 
@@ -10,7 +10,7 @@ class Animal
     @nickname = nickname
     @species = species
     @weight = weight
-    @current_zoo = zoo
+    @zoo = zoo #@current_zoo
     ANIMALS << self
   end
 
@@ -18,9 +18,9 @@ class Animal
     ANIMALS
   end
 
-  def zoo
-    self.current_zoo
-  end
+  # def zoo
+  #   self.current_zoo
+  # end
 
   def self.find_by_species(species)
     self.all.select do |animal|

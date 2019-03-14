@@ -15,6 +15,8 @@ bill = bronx_zoo.acquire_animal("Bill", "lion", "150 lb")
 sabrina = bronx_zoo.acquire_animal("Sabrina", "cheetah", "150 lb")
 dario = bronx_zoo.acquire_animal("Dario", "panther", "150 lb")
 
+# binding.pry
+
 print "🦑"
 p bronx_zoo.animals.first.nickname
 print "🦁"
