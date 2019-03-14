@@ -1,6 +1,6 @@
 class Animal
-  attr_reader :species, :nickname
-  attr_accessor :weight, :zoo
+  attr_reader :species, :nickname, :zoo
+  attr_accessor :weight
 
   ALLANIMALS = []
 
@@ -16,10 +16,9 @@ class Animal
      ALLANIMALS
    end
 
-   def self.find_species_by(animal)
+   def self.find_by_species(animal)
      ALLANIMALS.select do |ani|
-       if ani == animal
-       end
+        ani.species == animal
       end
    end
 end

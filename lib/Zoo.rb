@@ -44,7 +44,32 @@ class Zoo
 
   def find_by_species(species)
     animals.select do |ani|
-      ani.species == ani
+      ani.species == species
     end
   end
+
+  def animal_nicknames
+    arr = []
+    animals.select do |ani|
+      arr << ani.nickname
+    end
+    arr
+  end
+
+  def self.find_by_location (location)
+    ####### Uncomment to return array of Zoo *names*
+    # arr = []
+    #   ALLZOOS.each do |zoo|
+    #     if zoo.location == location
+    #       arr << zoo.name
+    #     end
+    #   end
+    # arr
+    ALLZOOS.select do |zoo|
+      zoo.location == location
+    end
+
+  end
+
+
 end
