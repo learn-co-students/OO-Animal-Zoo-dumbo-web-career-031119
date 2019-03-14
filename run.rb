@@ -15,7 +15,7 @@ bill = bronx_zoo.acquire_animal("Bill", "lion", "150 lb")
 sabrina = bronx_zoo.acquire_animal("Sabrina", "cheetah", "150 lb")
 dario = bronx_zoo.acquire_animal("Dario", "panther", "150 lb")
 
-p bronx_zoo.animals.first.nickname
+p bronx_zoo.animals.first.nickname 🐒
 p bronx_zoo.animal_species
 p bronx_zoo.find_by_species("panther").last.nickname
 p bronx_zoo.animal_nicknames
