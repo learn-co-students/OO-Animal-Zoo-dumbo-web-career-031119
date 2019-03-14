@@ -29,7 +29,3 @@ class Animal
   end
 
 end
-
-#shamu = Animal.new("Shamu", "whale", "1,000 lb", "Sea World")
-
-#shamu.zoo
