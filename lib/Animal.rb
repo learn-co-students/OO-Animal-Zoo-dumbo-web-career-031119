@@ -1,3 +1,7 @@
 class Animal
-   this is the start 
+
+   def initialize
+     
+
+   end
 end
