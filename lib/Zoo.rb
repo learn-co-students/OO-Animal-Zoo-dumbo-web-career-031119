@@ -26,21 +26,20 @@ class Zoo
     arr = []
     animals.select do |ani|
       if arr == []
-        arr << ani
+        arr << ani.species
       else
         does_exist = false
         arr.each do |x|
-          if x.species == ani.species
+          if x == ani.species
             does_exist = true
           end
         end
         if(!does_exist)
-          arr << ani
+          arr << ani.species
         end
       end
     end
-
-
+    arr
   end
 
   def find_by_species(species)

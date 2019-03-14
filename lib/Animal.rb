@@ -1,6 +1,6 @@
 class Animal
   attr_reader :species, :nickname
-  attr_accessor :weight
+  attr_accessor :weight, :zoo
 
   ALLANIMALS = []
 
