@@ -9,20 +9,15 @@ class Zoo
     @@zoo << self
   end
 
-#   def animals
-#     binding.pry
-#     Animal.ALL#.select{|ani| ani.location == @name}
-#     binding.pry
-  #end
+  def loc_animal
+    Animal.all_unique_animals.select{|ani| ani.location == self.location}
+  end
 
   def animal_species
-
-
     unique_species = []
-    
-    Animal.all_unique_animals.each do |animal|
-        if !(unique_species.include?(animal.species)) && animal.zoo == self
-            unique_species << animal.species
+    loc_animal.all_unique_animals.each do |ani|
+        if !(unique_species.include?(ani.species))
+            unique_species << ani.species
         end
     end
     return unique_species
@@ -37,7 +32,7 @@ class Zoo
 # Zoo.find_by_locationshould take in a location as an argument and return an array of all the zoos within that location.
 
   def animal_nicknames 
-    Animal.all_unique_animals.map{|animal| animal.nickname}
+    loc_animal.all_unique_animals.map{|anim| anim.nickname}
   end
 
   def self.find_by_location(term)
