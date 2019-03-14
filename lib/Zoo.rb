@@ -17,7 +17,7 @@ class Zoo
      ZOOS
   end
 
-  def acquire_animal(nickname, species, weight)
+  def acquire_animal(nickname, species, weight) #or just do Animal.new w/ zoe = variable pointing to instance of zoo
     new_animal = Animal.new(nickname, species, weight, self)
     # @animals << new_animal
     # new_animal
