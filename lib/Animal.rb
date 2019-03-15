@@ -6,10 +6,11 @@ class Animal
     attr_reader :species, :nickname, :find_by_species
     attr_accessor :weight, :zoo
 
-    def initialize(species, weight, nickname)
+    def initialize(species, weight, nickname, zoo = "")
         @species = species
         @weight = weight
         @nickname = nickname
+        @zoo = zoo
         @@all << self
     end
 

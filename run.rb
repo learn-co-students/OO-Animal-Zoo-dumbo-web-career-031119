@@ -23,14 +23,14 @@ sat.zoo = flatiron
 
 ################################
 
-g_s
-Animal.all
-Animal.find_by_species("bat")
-Zoo.all
-flatiron.animals
-flatiron.animal_species
-flatiron.find_by_species("dog")
-Zoo.find_by_location("NYC")
+puts g_s
+puts Animal.all
+puts Animal.find_by_species("bat")
+puts Zoo.all
+puts flatiron.animals
+puts flatiron.animal_species
+puts flatiron.find_by_species("dog")
+puts Zoo.find_by_location("NYC")
 
 
 #binding.pry
